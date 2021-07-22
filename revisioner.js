@@ -42,7 +42,7 @@ var Revisioner = (function () {
     // Make tools available client side callbacks supplied in options
     this.Tool = Tool;
 
-    var nonFileNameChar = "[^~a-zA-Z0-9\\.\\-\\_\\/]";
+    var nonFileNameChar = "[^a-zA-Z0-9\\~\\.\\-\\_\\/]";
     var qoutes = "'|\"";
 
     function referenceToRegexs(reference) {
