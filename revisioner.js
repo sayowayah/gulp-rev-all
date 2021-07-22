@@ -77,7 +77,7 @@ var Revisioner = (function () {
         ")(" +
         nonFileNameChar +
         "|$)";
-      regExps.push(new RegExp(regExp, "g"));
+      regExps.push(new RegExp(regExp, "gi"));
 
       return regExps;
     }
