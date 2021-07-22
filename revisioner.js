@@ -47,7 +47,7 @@ var Revisioner = (function () {
 
     function referenceToRegexs(reference) {
       var escapedRefPathBase = Tool.path_without_ext(reference.path).replace(
-        /~?([^0-9a-z])/gi,
+        /([^0-9a-z])/gi,
         "\\$1"
       );
       var escapedRefPathExt = Path.extname(reference.path).replace(
@@ -70,7 +70,7 @@ var Revisioner = (function () {
       regExp =
         "(" +
         nonFileNameChar +
-        ")(" +
+        ")(~?" +
         escapedRefPathBase +
         ")(" +
         escapedRefPathExt +
