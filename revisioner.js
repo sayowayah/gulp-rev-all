@@ -42,7 +42,7 @@ var Revisioner = (function () {
     // Make tools available client side callbacks supplied in options
     this.Tool = Tool;
 
-    var nonFileNameChar = "[^a-zA-Z0-9\\.\\-\\_\\/]";
+    var nonFileNameChar = "[^~a-zA-Z0-9\\.\\-\\_\\/]";
     var qoutes = "'|\"";
 
     function referenceToRegexs(reference) {
@@ -63,7 +63,7 @@ var Revisioner = (function () {
       if (isJSReference) {
         regExp =
           "(" + qoutes + ")(" + escapedRefPathBase + ")()(" + qoutes + "|$)";
-        regExps.push(new RegExp(regExp, "g"));
+        regExps.push(new RegExp(regExp, "gi"));
       }
 
       // Expect left and right sides of the reference to be a non-filename type character, escape special regex chars
