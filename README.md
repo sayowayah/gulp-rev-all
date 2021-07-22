@@ -2,6 +2,10 @@
 
 > Static asset revisioning with dependency considerations, appends content hash to each filename (eg. unicorn.css => unicorn.098f6bcd.css), re-writes references.
 
+## sayowayah's edits
+1. Added additional regex flag to enable case-insensitive find/replace
+2. Added optional ~ in filepath regex to support Blazor/Razor `~/` syntax
+
 ## Purpose
 
 By using the HTTP server response header `expires` combined with filename revisioning, static assets can be made cacheable for extended periods of time. Returning visitors will have the assets cached for super fast load times.
